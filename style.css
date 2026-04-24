@@ -6,7 +6,7 @@
   --text-color: #333333;
   --link-color: #2563eb;
   --background-color: #ffffff;
-  --light-gray: #f0f0f0;
+  --light-gray: #e3e3e3;
   --gray: #808080;
   --dark-gray: #555;
 }
@@ -19,8 +19,9 @@
 }
 
 body {
-  height: 100vh;
-  text-align: center;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: var(--background-color);
   padding: 2rem;
 }
@@ -124,12 +125,12 @@ body {
 }
 
 .hero-section {
-  padding-top: 2rem;
+  margin: 2.2rem auto;
   max-width: 950px;
-  margin: 0 auto;
   width: 100%;
   display: flex;
   gap: 5px;
+  /* border: 1px solid black; */
 }
 
 .hero-content {
@@ -149,10 +150,22 @@ body {
   width: 55%;
   padding: 5px;
   text-align: left;
+  animation: slidefromleft 1.3s ease forwards;
 }
 
-.left-content{
-    font-size: 1.1rem;
+@keyframes slidefromleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.left-content {
+  font-size: 1.1rem;
 }
 
 .content-right {
@@ -202,9 +215,10 @@ body {
   font-weight: 600;
 }
 
-.button-content{
-    display: flex;
-    gap: 10px;
+.button-content {
+  display: flex;
+  gap: 10px;
+  width: 100%;
 }
 
 @media screen and (max-width: 715px) {
@@ -213,11 +227,73 @@ body {
     flex-direction: column;
   }
 
-  .left-content{
+  .left-content {
     width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
-  .content-right{
+  .content-right {
     width: 80%;
   }
+
+  .button-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .para-first{
+    margin: 0px auto;
+  }
+}
+
+.trusted-container {
+  display: flex;
+  justify-content: center;
+}
+
+.trusted {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  display: inline-flex;
+  margin: 1rem 0;
+  /* border: 1px solid black; */
+  padding: 13px 17px;
+  color: var(--dark-gray);
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  font-weight: 550;
+  animation: slidefromleft 1.3s ease forwards;
+}
+
+@keyframes slidefromleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.brand img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+#trusted-title {
+  text-align: center;
 }
