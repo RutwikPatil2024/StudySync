@@ -23,7 +23,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   background-color: var(--background-color);
-  padding: 2rem;
+  padding-top: 2rem;
 }
 
 .header-content {
@@ -243,7 +243,7 @@ body {
     justify-content: center;
   }
 
-  .para-first{
+  .para-first {
     margin: 0px auto;
   }
 }
@@ -296,4 +296,157 @@ body {
 
 #trusted-title {
   text-align: center;
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 20px;
+  padding: 1.5rem;
+  background-color: rgba(171, 171, 171, 0.377);
+}
+
+.bottom-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card {
+  width: 300px;
+  background: var(--accent-color);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 0 0 6px white;
+}
+
+.icon img {
+  width: 50%;
+  height: 100%;
+}
+
+.card-content{
+  text-align: center;
+}
+
+.card-content h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: var(--background-color);
+}
+
+.card-content p {
+  font-size: 16px;
+  color: var(--background-color);
+  padding: 9px 0px;
+
+}
+
+.affordable{
+  background-color: rgba(255, 29, 67, 0.769);
+}
+
+.partner{
+  background-color: rgba(255, 204, 0, 0.85);
+}
+
+.technology{
+  background-color: rgba(0, 156, 153, 0.972);
+}
+
+.Responsive{
+  background-color: rgba(0, 185, 0, 0.866);
+}
+
+.insights{
+  background-color: rgba(128, 0, 128, 0.661);
+}
+
+@media screen and (min-width:1060px) {
+  .bottom-content{
+    width: 70%;
+  }
+}
+
+.top-content{
+  width: 65%;
+}
+
+.top-content p{
+  color: var(--gray);
+}
+
+.testimonial-container{
+  background-color: var(--background-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-container{
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#test-para{
+  color: var(--text-color);
+  font-weight: 520;
+  
+}
+
+.testi-card{
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.196);
+  box-shadow: 1px 1px 3px -2px black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.testi-card img{
+  width: 75px;
+  height: 75px;
+} 
+
+.testi-card h3{
+  color: var(--primary-color);
+}
+
+.testi-card p{
+  color: var(--dark-gray);
+} 
+
+.testi-card:hover{
+  box-shadow: 1px 1px 5px -1px black;
+  transform: scale(1.02);
+  transition: transform 0.5s ease;
+}
+
+h2,p{
+  margin-bottom: auto;
 }
